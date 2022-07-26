@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: "postgres:13"
+    container_name: "blog_postgres"
+    environment:
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5433:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+volumes:
+  database:
